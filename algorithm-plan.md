@@ -31,7 +31,7 @@
 
 ### What functions should be in which modules?
 ##### What is the responsibility of each function?
-#### What should each function return?
+##### What should each function return?
 - Main:
     - generateInnerHTML() - generates innerHTML of the main container
 - Areas:
@@ -50,3 +50,5 @@
         - getAreaServices() - returns a clone of the `areaServices` array
 
 ### What is the specific algorithm for each function? Does the function need parameters? Should it return something?
+No HTML functions take parameters
+Click Events - the parameter is the specific target
