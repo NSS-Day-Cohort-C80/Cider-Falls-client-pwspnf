@@ -1,6 +1,6 @@
-import { Guests } from "./guests.js"
- import { Areas } from "./areas.js"
- import { Services } from "./services.js"
+import { generateGuests } from "./guests.js"
+import { generateAreaHTML } from "./areas.js"
+import { generateServicesHTML } from "./services.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -13,15 +13,15 @@ const applicationHTML = `
             <section class="detail--column details__areas__grid">
                 <h2 class="areas__title">Park Areas</h2>
                     <div class="detail--sentence details__services_sentence">
-                    <strong>Services We Offer:</strong>${Services()}
+                    <strong>Services We Offer:</strong>${generateServicesHTML()}
                     </div>
                     <div class="areas__grid">
-                    ${Areas()}
+                    ${generateAreaHTML()}
                     </div>
             </section>
             <section class="detail--column details__guests__column">
                 <h2 class="guest__title">Park Guests</h2>
-                ${Guests()}
+                ${generateGuests()}
             </section>
         </article>
     <footer> 

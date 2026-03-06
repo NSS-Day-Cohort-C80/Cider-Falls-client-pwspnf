@@ -69,7 +69,7 @@ document.addEventListener(
 //     }
 // )
 
-export const Services = () => {
+export const generateServicesHTML = () => {
     let html = ""
 
     //span is an inline element used for small sentences in HTML
