@@ -17,4 +17,6 @@ const findServicesMatch = (area, areaServiceArray, serviceArray) => {
     return services
 }
 
-
+ const generateAreaHTML = () => {
+    
+ }
