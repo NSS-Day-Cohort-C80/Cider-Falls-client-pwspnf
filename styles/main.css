@@ -62,6 +62,16 @@ li {
     flex: 1;
 }
 
+.details__areas__grid {
+
+}
+
+.areas__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+}
 .details__guests__column {
     text-align: right;
     background-color: #efefef;
