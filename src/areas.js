@@ -17,6 +17,19 @@ const findServicesMatch = (area, areaServiceArray, serviceArray) => {
     return services
 }
 
- const generateAreaHTML = () => {
-    
+ export const generateAreaHTML = () => {
+    let areasHTML = ""
+
+    for (const area of areas) {
+        const areaServices= findServicesMatch(area, areaServiceArray, serviceArray)
+        const serviceName = areaServices.map((service) => {
+            return `<li class="service__list">${service.name}</li>`
+        }).join("")
+        
+        areasHTML += `<h3 data-areaid="${area.id}" class="area__name">${area.name}</h3>
+        <ul>
+        ${serviceName}
+        </ul>`
+    }
+    return areasHTML
  }
