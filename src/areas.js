@@ -27,7 +27,7 @@ const findServicesMatch = (area, areaServiceArray, serviceArray) => {
             return `<li class="service__list">${service.name}</li>`
         }).join("")
         
-        areasHTML += `<h3 data-areaid="${area.id}" class="area__name">${area.name}</h3>
+        areasHTML += `<h3 data-areaid="${area.id}" class="area__name" data-type="area">${area.name}</h3>
         <ul>
         ${serviceName}
         </ul>`
@@ -40,7 +40,7 @@ document.addEventListener(
     (clickEvent) => {
         const clickTarget = clickEvent.target
 
-        if (clickTarget.dataset.areaid) {
+        if (clickTarget.dataset.type === "area") {
             let guestAmount = 0
             const areaId = parseInt(clickTarget.dataset.areaid)
 
