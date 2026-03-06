@@ -22,7 +22,16 @@ textarea {
 
 header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px dotted rgb(255, 245, 204);
+    padding: 1rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -57,13 +66,9 @@ li {
     padding: 1rem;
 }
 
-
 .detail--column {
     flex: 1;
-}
-
-.details__areas__grid {
-
+    padding: 1rem;
 }
 
 .areas__grid {
@@ -72,8 +77,22 @@ li {
     grid-template-rows: repeat(2, auto);
     gap: 1rem;
 }
+
+.details__areas__grid {
+    background-color: rgb(255, 245, 204);
+}
+
 .details__guests__column {
     text-align: right;
-    background-color: #efefef;
     padding: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .details__guests__column {
+    text-align: center;
+    }
 }
