@@ -27,10 +27,17 @@ const findServicesMatch = (area, areaServiceArray, serviceArray) => {
             return `<li class="service__list">${service.name}</li>`
         }).join("")
         
-        areasHTML += `<h3 data-areaid="${area.id}" class="area__name" data-type="area">${area.name}</h3>
-        <ul>
-        ${serviceName}
-        </ul>`
+        areasHTML += `<article class="area__details">
+                        <h3
+                            data-areaid="${area.id}" 
+                            data-type="area"
+                            class="area__name"
+                            >${area.name}
+                        </h3>
+                        <ul>
+                            ${serviceName}
+                        </ul>
+                    </article>`
     }
     return areasHTML
  }
