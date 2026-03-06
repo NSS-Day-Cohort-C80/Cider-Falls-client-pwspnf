@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/*Typography
+--------------------------------------------------------------*/
+body {
+	background-color:rgb(255, 255, 255);
+    color: #333333;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+	color: #333333;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px dotted rgb(255, 245, 204);
+    padding: 1rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+    display: flex;
+    padding: 1rem;
+}
+
+.park__logo {
+    justify-content: center;
+    max-width: 300px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 10px;
+    padding: 1rem;
+}
+
+.detail--column {
+    flex: 1;
+    padding: 1rem;
+}
+
+.areas__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+}
+
+.details__areas__grid {
+    background-color: rgb(255, 245, 204);
+}
+
+.details__guests__column {
+    text-align: right;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .details__guests__column {
+    text-align: center;
+    }
+}
