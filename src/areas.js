@@ -1,8 +1,9 @@
-import { getAreas, getServices, getAreaServices } from "./database.js"
+import { getAreas, getServices, getAreaServices, getGuests } from "./database.js"
 
 const areas = getAreas()
 const serviceArray = getServices()
 const areaServiceArray = getAreaServices()
+const guests = getGuests()
 
 const findServicesMatch = (area, areaServiceArray, serviceArray) => {
     let services = []
@@ -33,3 +34,22 @@ const findServicesMatch = (area, areaServiceArray, serviceArray) => {
     }
     return areasHTML
  }
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const clickTarget = clickEvent.target
+
+        if (clickTarget.dataset.areaid) {
+            let guestAmount = 0
+            const areaId = parseInt(clickTarget.dataset.areaid)
+
+            for (const guest of guests) {
+                if (guest.areaId === areaId) {
+                    guestAmount++
+                }
+            }
+            window.alert(`This area has ${guestAmount} guests.`)
+        }
+    }
+)
